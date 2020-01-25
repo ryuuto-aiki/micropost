@@ -44,6 +44,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @likes = @user.likes.page(params[:page])
     counts(@user)
+    redirect_to root_url
   end
   
   private
